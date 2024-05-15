@@ -1,0 +1,50 @@
+type Vinyl @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Album: String
+  Artist: String
+  Label: String
+  publicationYear: String
+  vinylCover: String
+  vinylThumbnail: String
+}
+
+type Game @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Title: String
+  Studio: String
+  Publisher: String
+  publicationYear: String
+  gameCover: String
+  gameThumbnail: String
+}
+
+type Comics @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Title: String
+  Author: String
+  Publisher: String
+  publicationYear: Int
+  pageCount: Int
+  digitalCopy: Boolean
+  comicCover: String
+  comicThumbnail: String
+}
+
+type Books @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Title: String
+  Author: String
+  Publisher: String
+  publicationYear: Int
+  pageCount: Int
+  digitalCopy: Boolean
+  bookCover: String
+  bookThumbnail: String
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Email: String
+  Password: String
+  Username: String
+}
